@@ -1,7 +1,9 @@
-<h1>Real Time Messaging</h1>
+<h1>Kubit Websockets</h1>
 <pre id="messages" style="height: 400px; overflow: scroll"></pre>
-<input type="text" id="messageBox" placeholder="Type your message here" style="display: block; width: 100%; margin-bottom: 10px; padding: 10px;" />
-<button id="send" title="Send Message!" style="width: 100%; height: 30px;">Send Message</button>
+<input type="text" id="messageBox" placeholder="Digite uma mensagem..." style="display: block; width: 100%; margin-bottom: 10px; padding: 10px;" />
+<button id="send" title="Send Message!" style="width: 100%; height: 30px;">
+  Enviar mensagem para o arduino
+</button>
 
 <script>
   (function() {
@@ -25,7 +27,7 @@
 
       ws = new WebSocket('wss://kubit-websockets.herokuapp.com');
       ws.onopen = () => {
-        console.log('Connection opened!');
+        console.log('Conexão aberta!');
       }
       ws.onmessage = ({ data }) => showMessage(data);
       ws.onclose = function() {
@@ -35,7 +37,7 @@
 
     sendBtn.onclick = function() {
       if (!ws) {
-        showMessage("No WebSocket connection :(");
+        showMessage("Conexão perdida :(");
         return ;
       }
 
