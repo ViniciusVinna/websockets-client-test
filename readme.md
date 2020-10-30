@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/02e7979d-59b4-4e4b-8e39-ee35e5aeda07/deploy-status)](https://app.netlify.com/sites/kubit-messenger/deploys)
