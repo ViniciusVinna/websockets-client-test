@@ -23,7 +23,7 @@
         ws.close();
       }
 
-      ws = new WebSocket('https://kubit-websockets.herokuapp.com:6969');
+      ws = new WebSocket('wss://kubit-websockets.herokuapp.com:6969');
       ws.onopen = () => {
         console.log('Connection opened!');
       }
